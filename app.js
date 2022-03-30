@@ -22,6 +22,9 @@ new Vue({
         showCoordinates: function(event){
             this.x = event.offsetX;
             this.y = event.offsetY;
+        },
+        click: function(){
+            alert('You have alerted me! Cannot Proceed to Search!');
         }
     }
 });
