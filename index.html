@@ -32,10 +32,16 @@
                 <br>    
                 <span>{{ comment }}
             </p>
+            <br>
+            <button v-on:click="a++">Number Incrementor {{ a }} </button>
+            <br>
+            <p>You'll be {{ addToA }} years old in the next {{ a }} year/years.</p>
             <hr>
             <div id="canvas" v-on:mousemove="showCoordinates">The Co-ordinates of the Mouse Pointer are : {{ x }},{{ y }}</div> 
-            <a v-on:click.prevent="click" href="http://google.com/search">Google Search</a>  
+            <a v-on:click.prevent="click" href="http://google.com/search">Google Search</a>
+            <br><br>
+            <a v-on:dblclick.prevent="click" href="http://google.com/search">New Google Search</a>
         </div>
         <script src="app.js"></script>
     </body>
-</html>
+</html> 

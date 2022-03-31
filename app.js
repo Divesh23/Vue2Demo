@@ -33,6 +33,11 @@ new Vue({
         },
         alertDate: function(){
             alert('You Entered Your Date Of Joining');
-        },
+        }
     },
+    computed: {
+        addToA: function(){
+            return this.age + this.a
+        }
+    }
 });
