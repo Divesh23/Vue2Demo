@@ -19,6 +19,12 @@
             <button v-on:click="subtract(1)">Subtract 1 Year From My Age</button>
             <button v-on:dblclick.once="add(10)">Add 10 Years To My Age</button>
             <button v-on:dblclick="subtract(10)">Subtract 10 Years From My Age</button>
+            <p>Reason for Joining Company:
+                <input type="text" v-on:keyup.enter="alertReason"/>
+            </p>
+            <p>Date Of Joining:
+                <input type="text" v-on:keyup.alt.enter="alertDate"/>
+            </p>
             <hr>
             <div id="canvas" v-on:mousemove="showCoordinates">The Co-ordinates of the Mouse Pointer are : {{ x }},{{ y }}</div> 
             <a v-on:click.prevent="click" href="http://google.com/search">Google Search</a>  

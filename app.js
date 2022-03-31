@@ -25,6 +25,12 @@ new Vue({
         },
         click: function(){
             alert('You have alerted me! Cannot Proceed to Search!');
-        }
+        },
+        alertReason: function(){
+            alert('You Entered Your Reason');
+        },
+        alertDate: function(){
+            alert('You Entered Your Date Of Joining');
+        },
     }
 });
