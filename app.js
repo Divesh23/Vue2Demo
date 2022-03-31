@@ -7,7 +7,9 @@ new Vue({
         websiteTag: '<a href="https://github.com/">My GitHub Link</a>',
         age: 25,
         x: 0,
-        y: 0
+        y: 0,
+        comment:'',
+        a: 0
     },
     methods: {
         greet : function(time){
@@ -32,5 +34,5 @@ new Vue({
         alertDate: function(){
             alert('You Entered Your Date Of Joining');
         },
-    }
+    },
 });

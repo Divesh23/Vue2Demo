@@ -25,6 +25,13 @@
             <p>Date Of Joining:
                 <input type="text" v-on:keyup.alt.enter="alertDate"/>
             </p>
+            <p>Enter What's Best About The Company:
+                <input type="text" v-model="comment"/>
+                <br><br>
+                <b>Preview:</b> 
+                <br>    
+                <span>{{ comment }}
+            </p>
             <hr>
             <div id="canvas" v-on:mousemove="showCoordinates">The Co-ordinates of the Mouse Pointer are : {{ x }},{{ y }}</div> 
             <a v-on:click.prevent="click" href="http://google.com/search">Google Search</a>  
