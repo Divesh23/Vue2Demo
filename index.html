@@ -3,7 +3,7 @@
         <meta charset="utf-8" />
         <title>View JS 2</title>
         <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div id="vue-app">
@@ -41,6 +41,19 @@
             <a v-on:click.prevent="click" href="http://google.com/search">Google Search</a>
             <br><br>
             <a v-on:dblclick.prevent="click" href="http://google.com/search">New Google Search</a>
+            <hr>
+            <div v-on:click="available = !available" v-bind:class="{available:available}">
+                <span>Toggle From CSS</span>
+            </div>
+            <button v-on:click="available =!available">Toggle From Vue</button>
+            <button v-on:click="nearby = !nearby">Toggle From Vue</button>
+            <div v-bind:class="compClass">
+                <span>Look at the Colour Change</span>
+            </div>
+            <div v-bind:class="compClass">
+                <span >Look at the Colour Change</span>
+            </div>
+
         </div>
         <script src="app.js"></script>
     </body>

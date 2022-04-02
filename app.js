@@ -9,7 +9,9 @@ new Vue({
         x: 0,
         y: 0,
         comment:'',
-        a: 0
+        a: 0,
+        available: false,
+        nearby: false
     },
     methods: {
         greet : function(time){
@@ -38,6 +40,13 @@ new Vue({
     computed: {
         addToA: function(){
             return this.age + this.a
+        },
+        compClass: function(){
+            return{
+                available: this.available,
+                nearby: this.nearby,
+            }
         }
+
     }
 });
