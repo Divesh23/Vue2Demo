@@ -1,25 +1,27 @@
 <html>
-<head>
-    <title>McGregor Game</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/vue"></script>
-</head>
-<body>
-    <div id="vue-app">
-        <p> Punch Mcgregor And Enjoy The Awesome Benefits Of The Punch.</p>
-        <!--Cocky Mcgregor-->
-        <div id="cockyMcgregor" v-bind:class="{ punchedMcgregor:ended }"></div>
-        
-        <!--Progress Bar-->
-        <div id="progessBar">
-            <div v-bind:styles="{ width:health + '%'}"></div>
+    <head>
+        <meta charset="utf-8" />
+        <title>View JS 2</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="vue-app">
+            <p> Punch Mcgregor And Enjoy The Awesome Benefits Of The Punch.</p>
+            <!--Cocky Mcgregor-->
+            <div id="cockyMcgregor" v-bind:class="{ punchedMcgregor: ended }"></div>
+            
+            <!--Progress Bar-->
+            <div id="progessBar">
+                <div v-bind:styles="{ width: health + '%'}"></div>
+            </div>
+            <!--Buttons-->
+            <div id="control">
+                <button v-on:click="punch()" v-show="!ended">Punch</button>
+                <button v-on:click="restart()">Reset Game</button>
+                <p> {{health}} </p>
+            </div>    
         </div>
-        <!--Buttons-->
-        <div id="control">
-            <button v-on:click="punch()">Punch</button>
-            <button v-on:click="restart()">Reset Game</button>
-        </div>    
-    </div> 
-</body>
-<script scr="app.js"></script>
-</html>
+        <script src="app.js"></script>
+    </body>
+</html> 

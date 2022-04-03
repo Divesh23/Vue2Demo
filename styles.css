@@ -1,6 +1,3 @@
-.background{
-    background-color: black;
-}
 
 #cockyMcgregor{
     width: 500px;
@@ -26,7 +23,10 @@
 }
 
 #progessBar div{
-    width: 2%;
-    height: 30px;
+    height: 20px;
     background-color: red;
+}
+
+.central{
+    margin: 0 auto 20px auto;
 }
