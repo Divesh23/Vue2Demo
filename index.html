@@ -1,78 +1,25 @@
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>View JS 2</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div id="vue-app" class=center>
-            <h1>{{ greet('afternoon') }}</h1>
-            <p>Name : {{ name }}</p>
-            <p>Job :
-                <input type=text v-bind:value="job"/>
-            </p>
-            <a v-bind:href="website">{{ name }}'s GitHub Link To VueDemo </a>
-            <p v-html="websiteTag"></p>
-            <p>My Age is {{ age }}</p>
-            <button v-on:click="add(1)">Add 1 Year To My Age</button><br><br>
-            <button v-on:click="subtract(1)">Subtract 1 Year From My Age</button><br><br>
-            <button v-on:dblclick.once="add(10)">Add 10 Years To My Age</button><br><br>
-            <button v-on:dblclick="subtract(10)">Subtract 10 Years From My Age</button><br><br> 
-            <p>Reason for Joining Company:
-                <input type="text" v-on:keyup.enter="alertReason"/>
-            </p>
-            <p>Date Of Joining:
-                <input type="text" v-on:keyup.alt.enter="alertDate"/>
-            </p>
-            <p>Enter What's Best About The Company:
-                <input type="text" v-model="comment"/>
-                <br><br>
-                <b>Preview:</b> 
-                <br>    
-                <span>{{ comment }}
-            </p>
-            <br>
-            <button v-on:click="a++">Number Incrementor {{ a }} </button>
-            <br>
-            <p>You'll be {{ addToA }} years old in the next {{ a }} year/years.</p>
-            <hr>
-            <div id="canvas" v-on:mousemove="showCoordinates">The Co-ordinates of the Mouse Pointer are : {{ x }},{{ y }}</div> 
-            <a v-on:click.prevent="click" href="http://google.com/search">Google Search</a>
-            <br><br>
-            <a v-on:dblclick.prevent="click" href="http://google.com/search">New Google Search</a>
-            <hr>
-            <div v-on:click="available = !available" v-bind:class="{available:available}">
-                <span>Toggle From CSS</span>
-            </div>
-            <button v-on:click="available =!available">Toggle From Vue</button>
-            <button v-on:click="nearby = !nearby">Toggle From Vue</button>
-            <div v-bind:class="compClass">
-                <span>Look at the Colour Change</span>
-            </div>
-            <div v-bind:class="compClass">
-                <span >Look at the Colour Change</span>
-            </div>
-            <br>
-            <button v-on:click="error= !error" >Error</button>
-            <button v-on:click="success= !success">Success</button>
-            <p v-if="error" class="error">There is an Error</p>
-            <p v-else-if="success" class="success">Yayy!</p>
-            <button v-on:click="show= !show">Show</button>
-            <p v-show="show" class="show">This will be shown</p>
-            <ul>
-                <li v-for="(employee,index) in employees">{{ index }}: {{ employee }}</li>
-            </ul>
-            <ul>
-                <li v-for="(record,index) in records">{{ index }}: {{ record.name }} {{ record.age}}</li>
-            </ul>
-            <!-- Template used in place of div when output does not have to be rendered on console-->
-            <template v-for="record in records">
-                <ul>
-                    <li v-for="(value,key) in record">{{ key }} : {{ value }}</li>
-                </ul>
-            </template>
+<head>
+    <title>McGregor Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <p> Punch Mcgregor And Enjoy The Awesome Benefits Of The Punch.</p>
+        <!--Cocky Mcgregor-->
+        <div id="cockyMcgregor" v-bind:class="{ punchedMcgregor:ended }"></div>
+        
+        <!--Progress Bar-->
+        <div id="progessBar">
+            <div v-bind:styles="{ width:health + '%'}"></div>
         </div>
-        <script src="app.js"></script>
-    </body>
-</html> 
+        <!--Buttons-->
+        <div id="control">
+            <button v-on:click="punch()">Punch</button>
+            <button v-on:click="restart()">Reset Game</button>
+        </div>    
+    </div> 
+</body>
+<script scr="app.js"></script>
+</html>

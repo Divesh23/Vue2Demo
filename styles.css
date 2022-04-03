@@ -1,47 +1,32 @@
-.center {
-    margin: auto;
-    width: 50%; 
-    padding: 10px;
-  }
-
-body {
-    background-image: url("background.jpg");
-    background-repeat: no-repeat;
-   }
-
-span{
-    background: red;
-    display: inline-block;
-    padding: 10px;
-    color: #fff;
-    margin: 10px 0;
+.background{
+    background-color: black;
 }
 
-.available span{
-    background: green;
+#cockyMcgregor{
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    background: url(/images/Mcgregor.jpeg) no-repeat;
+    background-size: 100%;
 }
 
-.nearby span:after{
-    content: "This is a Post Fix";
-    margin-left: 10px;
+#cockyMcgregor.punchedMcgregor{
+    background: url(/images/KnockedOut.jpeg) no-repeat;
 }
 
-.error{
-    background:red;
-    margin-left: 20px;
+#control{
+    width: 200px;
+    margin: 0 auto;
 }
 
-.success{
-    background:green;
-    margin-left: 20px;
+#progessBar{
+    width: 200px;
+    border: 2px solid #000;
+    margin: 0 auto 20px auto;
 }
 
-.show{
-    background:red;
-    margin-left: 20px;
-}
-
-.noShow{
-    background:green;
-    margin-left: 20px;
+#progessBar div{
+    width: 2%;
+    height: 30px;
+    background-color: red;
 }
