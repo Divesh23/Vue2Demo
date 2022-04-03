@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id="vue-app">
+        <div id="vue-app" class=center>
             <h1>{{ greet('afternoon') }}</h1>
             <p>Name : {{ name }}</p>
             <p>Job :
@@ -15,10 +15,10 @@
             <a v-bind:href="website">{{ name }}'s GitHub Link To VueDemo </a>
             <p v-html="websiteTag"></p>
             <p>My Age is {{ age }}</p>
-            <button v-on:click="add(1)">Add 1 Year To My Age</button>
-            <button v-on:click="subtract(1)">Subtract 1 Year From My Age</button>
-            <button v-on:dblclick.once="add(10)">Add 10 Years To My Age</button>
-            <button v-on:dblclick="subtract(10)">Subtract 10 Years From My Age</button>
+            <button v-on:click="add(1)">Add 1 Year To My Age</button><br><br>
+            <button v-on:click="subtract(1)">Subtract 1 Year From My Age</button><br><br>
+            <button v-on:dblclick.once="add(10)">Add 10 Years To My Age</button><br><br>
+            <button v-on:dblclick="subtract(10)">Subtract 10 Years From My Age</button><br><br> 
             <p>Reason for Joining Company:
                 <input type="text" v-on:keyup.enter="alertReason"/>
             </p>
@@ -53,7 +53,13 @@
             <div v-bind:class="compClass">
                 <span >Look at the Colour Change</span>
             </div>
-
+            <br>
+            <button v-on:click="error= !error" >Error</button>
+            <button v-on:click="success= !success">Success</button>
+            <p v-if="error" class="error">There is an Error</p>
+            <p v-else-if="success" class="success">Yayy!</p>
+            <button v-on:click="show= !show">Show</button>
+            <p v-show="show" class="show">This will be shown</p>
         </div>
         <script src="app.js"></script>
     </body>

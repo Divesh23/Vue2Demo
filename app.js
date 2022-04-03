@@ -11,7 +11,10 @@ new Vue({
         comment:'',
         a: 0,
         available: false,
-        nearby: false
+        nearby: false,
+        error: false,
+        success: false,
+        show: false
     },
     methods: {
         greet : function(time){
