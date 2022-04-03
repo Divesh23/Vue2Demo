@@ -14,7 +14,13 @@ new Vue({
         nearby: false,
         error: false,
         success: false,
-        show: false
+        show: false,
+        employees: ['Divesh','David'],
+        records:[
+            {name:'Divesh' ,age:31},
+            {name:'David' ,age:25}
+        ]
+
     },
     methods: {
         greet : function(time){

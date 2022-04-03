@@ -60,6 +60,18 @@
             <p v-else-if="success" class="success">Yayy!</p>
             <button v-on:click="show= !show">Show</button>
             <p v-show="show" class="show">This will be shown</p>
+            <ul>
+                <li v-for="(employee,index) in employees">{{ index }}: {{ employee }}</li>
+            </ul>
+            <ul>
+                <li v-for="(record,index) in records">{{ index }}: {{ record.name }} {{ record.age}}</li>
+            </ul>
+            <!-- Template used in place of div when output does not have to be rendered on console-->
+            <template v-for="record in records">
+                <ul>
+                    <li v-for="(value,key) in record">{{ key }} : {{ value }}</li>
+                </ul>
+            </template>
         </div>
         <script src="app.js"></script>
     </body>
