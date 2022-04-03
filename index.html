@@ -7,13 +7,16 @@
     </head>
     <body>
         <div id="vue-app">
-            <p> Punch Mcgregor And Enjoy The Awesome Benefits Of The Punch.</p>
+            <p> Punch Mcgregor And Enjoy The Awesome Benefits Of The Punch!</p>
+            <div id ="subtext">
+                <p> “All that matters is how you see yourself.” – Conor McGregor</p>
+            </div>
             <!--Cocky Mcgregor-->
             <div id="cockyMcgregor" v-bind:class="{ punchedMcgregor: ended }"></div>
             
             <!--Progress Bar-->
             <div id="progessBar">
-                <div v-bind:styles="{ width: health + '%'}"></div>
+                <div v-bind:style="{ width: health + '%'}"></div>
             </div>
             <!--Buttons-->
             <div id="control">
