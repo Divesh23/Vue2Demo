@@ -73,6 +73,9 @@
                 </ul>
             </template>
             <greeting></greeting>
+            <input type="text" ref="input" />
+            <button v-on:click="changeOutput">Change Output</button>
+            <p>Favorite Food: {{ output }}</p>
         </div>
         <div id="vue-app-2" class="center">
             <p>Salary is : {{ salary }} </p>
