@@ -1,4 +1,4 @@
-new Vue({
+var one = new Vue({
     el:'#vue-app',
     data: {
         name : 'Divesh',
@@ -59,3 +59,22 @@ new Vue({
 
     }
 });
+
+var two = new Vue({
+    el:  '#vue-app-2',
+    data: {
+        title: 'This is the Seconds Instance',
+        salary: 1000000
+    },
+    methods: {
+
+    },
+    computed: {
+        changeJob: function(){
+            one.job='Front End Developer'
+        }
+
+    }
+});
+
+two.salary = 2000000;
