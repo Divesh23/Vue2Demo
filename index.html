@@ -73,10 +73,13 @@
                 </ul>
             </template>
             <greeting></greeting>
+            <input type="text" ref="input"/>
+            <button v-on:click="changeOutput">Change Output</button>
+            <p>{{ output }} </p>
         </div>
         <div id="vue-app-2" class="center">
             <p>Salary is : {{ salary }} </p>
-            <button v-on-click="changeJob">Change Job</button>
+            <button v-on:click="changeJob">Change Job</button>
             <greeting></greeting>
         </div>
         <div class="template"></div>
