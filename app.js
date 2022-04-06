@@ -1,3 +1,7 @@
+Vue.component('greeting',{
+    template: '<p>This is a component</p>'
+});
+
 var one = new Vue({
     el:'#vue-app',
     data: {
@@ -75,6 +79,11 @@ var two = new Vue({
         }
 
     }
+});
+
+var three = new Vue({
+    el: '.template',
+    template: '<p>This is a Standard Template</p>'
 });
 
 two.salary = 2000000;
