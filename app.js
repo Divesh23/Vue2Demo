@@ -23,8 +23,7 @@ var one = new Vue({
         records:[
             {name:'Divesh' ,age:31},
             {name:'David' ,age:25}
-        ],
-        output: 'Nothing'
+        ]
 
     },
     methods: {
@@ -49,10 +48,6 @@ var one = new Vue({
         },
         alertDate: function(){
             alert('You Entered Your Date Of Joining');
-        },
-        changeOutput: function(){
-            console.log(this.$refs);
-            this.output=this.$refs.input.value;
         }
     },
     computed: {
