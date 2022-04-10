@@ -1,7 +1,7 @@
 <template>
     <div>
         <app-header></app-header>
-        <app-employee></app-employee>
+        <app-employee v-bind:employees="employees"></app-employee>
         <app-footer></app-footer>
     </div>
 </template>
@@ -19,7 +19,15 @@ export default {
     },
     data () {
         return {
-          title: 'Employee App'
+            title: 'Employee App',
+            employees: [
+              {id: 1,name: "John", age: 27,job: "Finance",show: false},
+              {id: 2,name: "Divesh",age: 31,job: "QA Specialist",show: false},
+              {id: 3,name: "David",age: 31,job: "Developer",show: false},
+              {id: 4,name: "Ryan",age: 31,job: "DevOps",show: false},
+              {id: 5,name: "Chris",age: 31,job: "Support",show: false},
+              {id: 6,name: "Taylor",age: 31,job: "Manager",show: false}
+          ]
         }
     }
 }
