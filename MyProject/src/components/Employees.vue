@@ -1,7 +1,7 @@
 <template>
 <div id="employees">
         <ul>
-            <li v-for="employee in employees" :key="employee" v-on:click="employee.show = !employee.show">
+            <li v-for="employee in employees" :key="employee.id" v-on:click="employee.show = !employee.show">
                 <h3>{{employee.name}}</h3>
                 <h3 v-show="employee.show">Role : {{ employee.job }}</h3>
                 <h3 v-show="employee.show">Age : {{ employee.age }}</h3>
@@ -15,12 +15,12 @@ export default {
     data () {
         return {
           employees: [
-              {name: "John", age:27,job: "Finance",show: false},
-              {name: "Divesh",age:31,job: "QA Specialist",show: false},
-              {name: "David",age:31,job: "Developer",show: false},
-              {name: "Ryan",age:31,job: "DevOps",show: false},
-              {name: "Chris",age:31,job: "Support",show: false},
-              {name: "Taylor",age:31,job: "Manager",show: false},
+              {id: 1,name: "John", age: 27,job: "Finance",show: false},
+              {id: 2,name: "Divesh",age: 31,job: "QA Specialist",show: false},
+              {id: 3,name: "David",age: 31,job: "Developer",show: false},
+              {id: 4,name: "Ryan",age: 31,job: "DevOps",show: false},
+              {id: 5,name: "Chris",age: 31,job: "Support",show: false},
+              {id: 6,name: "Taylor",age: 31,job: "Manager",show: false},
           ]
         }
     }
