@@ -1,8 +1,8 @@
 <template>
     <div>
-        <app-header></app-header>
+        <app-header v-bind:title="title"></app-header>
         <app-employee v-bind:employees="employees"></app-employee>
-        <app-footer></app-footer>
+        <app-footer v-bind:title="title"></app-footer>
     </div>
 </template>
 

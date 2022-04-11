@@ -1,16 +1,27 @@
 <template>
 <div>
     <header>
-        <h1> {{ greeting }}</h1>
+        <h1 v-on:click="changeTitle"> {{ greeting }}-{{ title }}</h1>
     </header>
 </div>
 </template>
 
 <script>
 export default {
+    props:{
+        title: {
+            type: String,
+            required: true,
+        }
+    },
     data () {
         return {
             greeting: 'Welcome To Our Employee Page'
+        }
+    },
+    methods:{
+        changeTitle: function(){
+            this.title = "Latest Employees"
         }
     }
 }
