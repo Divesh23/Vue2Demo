@@ -21,7 +21,7 @@ export default {
     },
     methods:{
         changeTitle: function(){
-            this.title = "Latest Employees"
+            this.$emit('changeTitle','New Value');
         }
     }
 }

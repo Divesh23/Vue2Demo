@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header v-bind:title="title"></app-header>
+        <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
         <app-employee v-bind:employees="employees"></app-employee>
         <app-footer v-bind:title="title"></app-footer>
     </div>
@@ -29,6 +29,12 @@ export default {
               {id: 6,name: "Taylor",age: 31,job: "Manager",show: false}
           ]
         }
+    },
+    methods: {
+        updateTitle:function(updatedTitle){
+            this.title = updatedTitle;
+        }
+
     }
 }
 </script>
