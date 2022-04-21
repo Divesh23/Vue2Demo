@@ -5,9 +5,10 @@
 
 <script>
 // Imports
-import Employees from './components/Employees.vue';
+import addBlog from './components/addBlog.vue';
 export default {
     components: {
+        'add-blog': addBlog
     },
     data () {
         return {

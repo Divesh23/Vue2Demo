@@ -1,15 +1,6 @@
 <template>
-<div id="employees">
-        <ul>
-            <li v-for="employee in employees" :key="employee.id" v-on:click="employee.show = !employee.show">
-                <h3>{{employee.name}}</h3>
-                <h3 v-show="employee.show">Role : {{ employee.job }}</h3>
-                <h3 v-show="employee.show">Age : {{ employee.age }}</h3>                
-            </li>
-        </ul>
-        <hr>
-        <button class="buttonStyle" v-on:click="deleteUser">Delete Employee</button>
-</div>
+    <div id="blog">
+    </div>
 </template>
 
 <script>
