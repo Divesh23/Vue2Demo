@@ -12,15 +12,21 @@
             <p>Content:</p>
             <p>{{ blog.content }}</p>
             <div class="checkbox">
-                <label>For All Viewers</label>
-                <input type="checkbox" value="all" v-model="blog.categories"/>
+                <label>For Non Paid Viewers</label>
+                <input type="checkbox" value="nonPaid" v-model="blog.categories"/>
                 <label>For Paid Viewers</label>
-                <input type="checkbox" value="paid" v-model="blog.categories"/>
+                <input type="checkbox" value="Paid" v-model="blog.categories"/>
             </div>
             <p>Checked Values</p>
             <ul>
                 <li v-for="category in blog.categories " :key="category">{{ category }}</li>
             </ul>
+            <br>
+            <label>Select Any Value for Payment</label>
+            <select v-model="blog.paymentOption">
+                <option v-for="paymentOption in paymentOptions" :key="paymentOption"> {{ paymentOption }}</option>
+            </select>
+            <p>Payment Option: {{ blog.paymentOption}}</p>
         </form>
     </div>
 </template>
@@ -33,7 +39,9 @@ export default {
                 name:'',
                 content:'',
                 categories:[],
-            }
+                paymentOption:''
+            },
+            paymentOptions:['Credit Card','PayPal','Cash','E-Transfer']
         }
     },
     methods:{
@@ -44,10 +52,10 @@ export default {
 
 <style scoped>
 #blog {
-    height: 100vh;
+    height: 150vh;
     background: #666666;
     font-family: 'Balsamiq Sans', sans-serif;
-    width: 100%;
+    width: 200%;
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
