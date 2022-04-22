@@ -3,7 +3,7 @@
         <form class = card>
             <h1>The Form</h1>
             <label>Enter your Name</label><br>
-            <input type="text" required v-model.lazy="blog.name"/> <br>
+            <input type="text" required v-model.lazy="blog.name"/> <br><br>
             <label> Enter your content:</label><br>
             <textarea name="texbox" id="" cols="30" rows="10" required v-model.lazy="blog.content"/>
             <br>
@@ -69,5 +69,7 @@ export default {
   text-transform: uppercase;
 }
 
-
+.checkbox input {
+    margin-right: 30px;
+}
 </style>
