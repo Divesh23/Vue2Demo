@@ -2,15 +2,25 @@
     <div id="blog">
         <form class = card>
             <h1>The Form</h1>
-            <p>Enter your Name</p>
-            <input type="text" required v-model="name"/> 
-            <p> Enter your content:</p>
-            <textarea name="texbox" id="" cols="30" rows="10" required v-model="content"/>
+            <label>Enter your Name</label><br>
+            <input type="text" required v-model.lazy="blog.name"/> <br>
+            <label> Enter your content:</label><br>
+            <textarea name="texbox" id="" cols="30" rows="10" required v-model.lazy="blog.content"/>
             <br>
             <h3>Preview: </h3>
-            <p>Name:{{ name }}</p> 
+            <p>Name:{{ blog.name }}</p> 
             <p>Content:</p>
-            <p>{{ content }}</p>
+            <p>{{ blog.content }}</p>
+            <div class="checkbox">
+                <label>For All Viewers</label>
+                <input type="checkbox" value="all" v-model="blog.categories"/>
+                <label>For Paid Viewers</label>
+                <input type="checkbox" value="paid" v-model="blog.categories"/>
+            </div>
+            <p>Checked Values</p>
+            <ul>
+                <li v-for="category in blog.categories " :key="category">{{ category }}</li>
+            </ul>
         </form>
     </div>
 </template>
@@ -19,8 +29,11 @@
 export default {
     data () {
         return {
-            name:'',
-            content:''
+            blog: {
+                name:'',
+                content:'',
+                categories:[],
+            }
         }
     },
     methods:{
