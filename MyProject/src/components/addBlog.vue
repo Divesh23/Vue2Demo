@@ -27,6 +27,7 @@
                 <option v-for="paymentOption in paymentOptions" :key="paymentOption"> {{ paymentOption }}</option>
             </select>
             <p>Payment Option: {{ blog.paymentOption}}</p>
+            <button v-on:click.prevent="post">Submit Form</button>
         </form>
     </div>
 </template>
@@ -41,11 +42,21 @@ export default {
                 categories:[],
                 paymentOption:''
             },
-            paymentOptions:['Credit Card','PayPal','Cash','E-Transfer']
+            paymentOptions:['Credit Card','PayPal','Cash','E-Transfer'],
+            submitted:false
         }
     },
-    methods:{
-        
+    methods: {
+        post: function(){
+            this.$http.post('http://jsonplaceholder.typicode.com/posts', {
+                title: this.blog.name,
+                body: this.blog.content,
+                userId: 1
+            }).then(function(data){
+                console.log(data);
+                this.submitted = true;
+            });
+        }
     }
 }
 </script>
