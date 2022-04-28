@@ -1,9 +1,9 @@
 <template>
-    <div id="blog"> 
+    <div id="blog" v-theme:column="'slim'"> 
         <br><br><h1>Blogs</h1><br><br>
         <div v-for="blog in blogs" :key="blog.title">
             <ul>
-                <li><h2> Title: {{ blog.title }}</h2>
+                <li><h2 v-rainbow> Title: {{ blog.title }}</h2>
                  <p>Body: {{ blog.body }} </p></li>
             </ul>
             
