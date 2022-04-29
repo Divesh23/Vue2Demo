@@ -3,8 +3,8 @@
         <br><br><h1>Blogs</h1><br><br>
         <div v-for="blog in blogs" :key="blog.title">
             <ul>
-                <li><h2 v-rainbow> Title: {{ blog.title }}</h2>
-                 <p>Body: {{ blog.body }} </p></li>
+                <li><h2 v-rainbow> Title: {{ blog.title | to-uppercase }}</h2>
+                 <p>Body: {{ blog.body | snippet}} </p></li>
             </ul>
             
         </div>
