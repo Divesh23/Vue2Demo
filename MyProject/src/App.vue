@@ -1,7 +1,13 @@
 <template>
     <div>
-        <add-blog></add-blog>
-        <show-blog></show-blog>
+        <button v-on:click="showAddBlogDetails"> Form </button>
+        <button v-on:click="showShowBlogDetails"> Blogs </button>
+        <div v-show="showAddBlog">
+            <add-blog></add-blog>
+        </div>
+         <div v-show="showShowBlog">
+           <show-blog></show-blog>
+        </div>
     </div>
 </template>
 
@@ -17,10 +23,19 @@ export default {
     },
     data () {
         return {
-            
+            showAddBlog:false,
+            showShowBlog:false
         }
     },
     methods: {
+        showAddBlogDetails: function(){
+            this.showAddBlog = true;
+            this.showShowBlog = false;
+        },
+        showShowBlogDetails: function(){
+            this.showAddBlog = false;
+            this.showShowBlog = true;
+        }
        
     }
 }

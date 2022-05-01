@@ -5,7 +5,7 @@
         <div v-for="blog in filteredBlogs" :key="blog.title">
             <ul>
                 <li><h2 v-rainbow> Title: {{ blog.title | to-uppercase }}</h2>
-                 <p>Body: {{ blog.body | snippet}} </p></li>
+                 <p v-green>Body: {{ blog.body | snippet | toLowerCase }} </p></li>
             </ul>
             
         </div>
@@ -34,6 +34,21 @@ export default {
             return this.blogs.filter((blog) => {
                 return blog.title.toLowerCase().match(this.search.toLowerCase())
             })
+        }
+    },
+    filters:{
+        /*'to-lowercase': function(value) {
+            return value.toString().toLowerCase();
+        },*/
+        toLowerCase(value){
+            return value.toString().toLowerCase();
+        }
+    },
+    directives:{
+        'green':{
+            bind(el,binding,vnode){
+                el.style.color='green';
+            }
         }
     }
 }
