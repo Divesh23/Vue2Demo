@@ -14,7 +14,6 @@
 
 <script>
 import searchBlog from '../mixins/searchBlog'
-
 export default {
     data () {
         return {
@@ -32,7 +31,6 @@ export default {
 
     },
     computed:{
-        
     },
     filters:{
         /*'to-lowercase': function(value) {
